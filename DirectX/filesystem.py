@@ -22,7 +22,7 @@ class SystemManager:
             except OSError as e:
                 print(f"{Fore.RED}(Error): Could not create {full_file_path}. Error: {e}")
 
-    def delete_file(file_path: str, from_directory: Optional[str] = None) -> None:
+    def delete_file(self, file_path: str, from_directory: Optional[str] = None) -> None:
         if from_directory is None:
             try:
                 os.remove(file_path)
